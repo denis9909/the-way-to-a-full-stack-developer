@@ -1,0 +1,463 @@
+$background-dark-elements: #352F44;
+$background-dark: #2A2438;
+$background-dark-footer: #310A5D;
+$background-dark-blue: #411E8F;
+
+$background-light-elements: #BFACE2;
+$background-light: #ECF2FF;
+$background-light-footer: #3E54AC;
+$background-light-violet: #655DBB;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1180px;
+}
+
+// Sizes
+b {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.441rem;
+    line-height: 49px;
+}
+
+h2 {
+    font-size: 2.441rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 49px;
+}
+
+a,
+p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+// Nav
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: $background-dark-elements;
+
+    .container {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    a[href="http://шкм.in.ua/"] {
+        width: 52px;
+        height: 50px;
+    }
+
+    .links {
+        width: 451px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .box {
+            width: 351px;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                position: relative;
+                text-decoration: none;
+            }
+
+            a::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                border-radius: 4px;
+                background-color: white;
+                bottom: 0;
+                left: 0;
+                transform-origin: right;
+                transform: scaleX(0);
+                transition: transform .3s ease-in-out;
+            }
+
+            a:hover::before {
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+
+            .active::before {
+                transform-origin: left;
+                transform: scaleX(1);
+            }
+        }
+
+        .anchors {
+            display: none;
+        }
+    }
+
+    .toggle {
+        width: 80px;
+        height: 30px;
+        background-color: $background-dark;
+        border-radius: 30px;
+        position: relative;
+
+        section {
+            width: 26px;
+            height: 26px;
+            border-radius: 100%;
+            background-color: $background-dark-blue;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: 0.2s;
+        }
+    }
+
+    .toggle.active {
+        background-color: $background-light-violet;
+
+        section {
+            position: absolute;
+            top: 2px;
+            left: 52px;
+            transition: 0.2s;
+            background-color: $background-light;
+        }
+    }
+}
+
+// Burger
+#burger {
+    display: none;
+}
+
+#burger {
+    width: 30px;
+    position: relative;
+
+    section,
+    section::before,
+    section::after {
+        width: 30px;
+        height: 3px;
+        position: absolute;
+        border-radius: 2px;
+        background-color: $background-dark-blue;
+        transition: 0.3s;
+    }
+
+    section:before {
+        content: '';
+        top: -8px;
+    }
+
+    section::after {
+        content: '';
+        top: 8px;
+    }
+}
+
+.nav.active {
+    #burger {
+        section {
+            background: transparent;
+        }
+
+        section:before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        section::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+// Main
+.main {
+    width: 100%;
+    height: auto;
+    background-color: $background-dark;
+    padding: 30px 0 50px 0;
+
+    // Text
+    .skils {
+        width: 100%;
+        height: 300px;
+        margin: 15px 0 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        section {
+            width: 708px;
+            height: 300px;
+            padding: 20px;
+            border-radius: 30px;
+            background-color: $background-dark-blue;
+
+            h3 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.953rem;
+                line-height: 38px;
+            }
+
+            ul {
+                margin-left: 20px;
+                margin-top: 20px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 20px;
+            }
+        }
+
+        div {
+            width: 395px;
+            height: 300px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .front-end {
+            background-image: url(../img/front-end.svg);
+        }
+
+        .back-end {
+            background-image: url(../img/back-end.svg);
+        }
+
+        .full-stack {
+            background-image: url(../img/full-stack.svg);
+        }
+    }
+
+    section {
+        width: 100%;
+        height: 300px;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: $background-dark-blue;
+
+        h3 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.953rem;
+            line-height: 38px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 20px;
+        }
+    }
+
+    // Courses
+    .courses {
+        width: 100%;
+        height: auto;
+        margin: 50px 0;
+
+        .title {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            div {
+                width: 70px;
+                height: 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .box {
+            height: 1900px;
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            a {
+                width: 100%;
+                height: 300px;
+                padding: 20px;
+                background-color: $background-dark-blue;
+                border-radius: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                div {
+                    width: 860px;
+                    align-self: flex-start;
+
+                    p {
+                        margin-top: 15px;
+                        font-size: 1.25rem;
+                    }
+                }
+
+                img[alt="The odin project"] {
+                    margin-left: 30px;
+                    height: 260px;
+                }
+            }
+
+            a:hover {
+                box-shadow: $background-dark-blue 0px 13px 27px -5px, $background-dark-footer 0px 8px 16px -8px;
+            }
+        }
+
+        .box.row {
+            width: 100%;
+            height: 2089px;
+            display: grid;
+            grid-template-columns: repeat(2, 580px);
+            grid-template-rows: repeat(3, 683px);
+            gap: 20px;
+
+            a {
+                width: 100%;
+                height: 683px;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 260px 50px 1fr;
+                justify-items: center;
+                gap: 20px;
+
+                img {
+                    width: 260px;
+                }
+
+                div {
+                    width: 100%;
+
+                    h2 {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    // University
+    .university {
+        width: 100%;
+        height: 840px;
+
+        .box {
+            width: 100%;
+            height: 780px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            a {
+                width: 380px;
+                height: 380px;
+                border-radius: 30px;
+                position: relative;
+                background-color: $background-dark-blue;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 30px;
+                    transition: 0.3s;
+                    position: absolute;
+                    z-index: 2;
+                }
+
+                h4 {
+                    width: 340px;
+                    position: absolute;
+                    top: 220px;
+                    left: 20px;
+                    z-index: 1;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1.563rem;
+                    line-height: 30px;
+                }
+            }
+
+            a:hover img {
+                height: 180px;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    height: 208px;
+    width: 100%;
+    background-color: $background-dark-footer;
+
+    .container {
+        height: 208px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-links {
+        height: 163px;
+        width: 112px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.563rem;
+            line-height: 30px;
+        }
+    }
+
+    .social {
+        height: 110px;
+        width: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@import 'theme.scss';
+@import 'media-developer.scss';

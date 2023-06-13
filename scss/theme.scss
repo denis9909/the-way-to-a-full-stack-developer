@@ -1,0 +1,120 @@
+$background-light-elements: #BFACE2;
+$background-light: #ECF2FF;
+$background-light-footer: #3E54AC;
+$background-light-violet: #655DBB;
+
+.light-theme {
+    * {
+        color: black;
+    }
+
+    // Nav
+    .nav {
+        background-color: $background-light-elements;
+
+        .box {
+            a::before {
+                background-color: black;
+            }
+        }
+    }
+
+    // Header
+    .header {
+        background-color: $background-light;
+
+        a {
+            background-color: $background-light-footer !important;
+            color: white;
+        }
+    }
+
+    // Main
+    .main {
+        background-color: $background-light;
+
+        .main-box {
+            a {
+                background-color: $background-light-violet;
+            }
+
+            a:hover {
+                box-shadow: $background-light-footer 0px 2px 8px 0px;
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        background-color: $background-light-footer;
+        color: white;
+
+        .footer-links {
+
+            a,
+            h3 {
+                color: white;
+            }
+        }
+    }
+
+    .cookies {
+        background-color: $background-light-elements;
+
+        .box {
+            #accept {
+                background-color: $background-light-footer;
+                color: white;
+            }
+
+            #decline {
+                background-color: $background-light-violet;
+            }
+        }
+    }
+}
+
+// Developer
+.light-theme {
+    .main {
+        .skils {
+            .front-end {
+                background-image: url(../img/front-end-light.svg);
+            }
+
+            .back-end {
+                background-image: url(../img/back-end-light.svg);
+            }
+
+            .full-stack {
+                background-image: url(../img/full-stack-light.svg);
+            }
+        }
+
+        .courses {
+            a:hover {
+                box-shadow: $background-light-elements 0px 13px 27px -5px, $background-light-footer 0px 8px 16px -8px;
+            }
+        }
+
+        section {
+            background-color: $background-light-violet;
+        }
+
+        .arrow-box {
+            background: none;
+        }
+
+        .box {
+            a {
+                background-color: $background-light-violet;
+            }
+        }
+
+        .title {
+            img {
+                filter: invert(100);
+            }
+        }
+    }
+}

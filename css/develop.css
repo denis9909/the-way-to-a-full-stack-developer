@@ -1,0 +1,786 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1180px;
+}
+
+b {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.441rem;
+  line-height: 49px;
+}
+
+h2 {
+  font-size: 2.441rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 49px;
+}
+
+a,
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: #352F44;
+}
+.nav .container {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav a[href="http://шкм.in.ua/"] {
+  width: 52px;
+  height: 50px;
+}
+.nav .links {
+  width: 451px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav .links .box {
+  width: 351px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.nav .links .box a {
+  position: relative;
+  text-decoration: none;
+}
+.nav .links .box a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: right;
+      -ms-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.nav .links .box a:hover::before {
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.nav .links .box .active::before {
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+.nav .links .anchors {
+  display: none;
+}
+.nav .toggle {
+  width: 80px;
+  height: 30px;
+  background-color: #2A2438;
+  border-radius: 30px;
+  position: relative;
+}
+.nav .toggle section {
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background-color: #411E8F;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+.nav .toggle.active {
+  background-color: #655DBB;
+}
+.nav .toggle.active section {
+  position: absolute;
+  top: 2px;
+  left: 52px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #ECF2FF;
+}
+
+#burger {
+  display: none;
+}
+
+#burger {
+  width: 30px;
+  position: relative;
+}
+#burger section,
+#burger section::before,
+#burger section::after {
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  border-radius: 2px;
+  background-color: #411E8F;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#burger section:before {
+  content: "";
+  top: -8px;
+}
+#burger section::after {
+  content: "";
+  top: 8px;
+}
+
+.nav.active #burger section {
+  background: transparent;
+}
+.nav.active #burger section:before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.nav.active #burger section::after {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  background-color: #2A2438;
+  padding: 30px 0 50px 0;
+}
+.main .skils {
+  width: 100%;
+  height: 300px;
+  margin: 15px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+.main .skils section {
+  width: 708px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #411E8F;
+}
+.main .skils section h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.953rem;
+  line-height: 38px;
+}
+.main .skils section ul {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+}
+.main .skils div {
+  width: 395px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main .skils .front-end {
+  background-image: url(../img/front-end.svg);
+}
+.main .skils .back-end {
+  background-image: url(../img/back-end.svg);
+}
+.main .skils .full-stack {
+  background-image: url(../img/full-stack.svg);
+}
+.main section {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #411E8F;
+}
+.main section h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.953rem;
+  line-height: 38px;
+}
+.main section ul {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+}
+.main .courses {
+  width: 100%;
+  height: auto;
+  margin: 50px 0;
+}
+.main .courses .title {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.main .courses .title div {
+  width: 70px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .courses .box {
+  height: 1900px;
+  width: 100%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .courses .box a {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  background-color: #411E8F;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .courses .box a div {
+  width: 860px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.main .courses .box a div p {
+  margin-top: 15px;
+  font-size: 1.25rem;
+}
+.main .courses .box a img[alt="The odin project"] {
+  margin-left: 30px;
+  height: 260px;
+}
+.main .courses .box a:hover {
+  -webkit-box-shadow: #411E8F 0px 13px 27px -5px, #310A5D 0px 8px 16px -8px;
+          box-shadow: #411E8F 0px 13px 27px -5px, #310A5D 0px 8px 16px -8px;
+}
+.main .courses .box.row {
+  width: 100%;
+  height: 2089px;
+  display: grid;
+  grid-template-columns: repeat(2, 580px);
+  grid-template-rows: repeat(3, 683px);
+  gap: 20px;
+}
+.main .courses .box.row a {
+  width: 100%;
+  height: 683px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 260px 50px 1fr;
+  justify-items: center;
+  gap: 20px;
+}
+.main .courses .box.row a img {
+  width: 260px;
+}
+.main .courses .box.row a div {
+  width: 100%;
+}
+.main .courses .box.row a div h2 {
+  text-align: center;
+}
+.main .university {
+  width: 100%;
+  height: 840px;
+}
+.main .university .box {
+  width: 100%;
+  height: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main .university .box a {
+  width: 380px;
+  height: 380px;
+  border-radius: 30px;
+  position: relative;
+  background-color: #411E8F;
+}
+.main .university .box a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 2;
+}
+.main .university .box a h4 {
+  width: 340px;
+  position: absolute;
+  top: 220px;
+  left: 20px;
+  z-index: 1;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.563rem;
+  line-height: 30px;
+}
+.main .university .box a:hover img {
+  height: 180px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer {
+  height: 208px;
+  width: 100%;
+  background-color: #310A5D;
+}
+.footer .container {
+  height: 208px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .footer-links {
+  height: 163px;
+  width: 112px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer .footer-links h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.563rem;
+  line-height: 30px;
+}
+.footer .social {
+  height: 110px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.light-theme * {
+  color: black;
+}
+.light-theme .nav {
+  background-color: #BFACE2;
+}
+.light-theme .nav .box a::before {
+  background-color: black;
+}
+.light-theme .header {
+  background-color: #ECF2FF;
+}
+.light-theme .header a {
+  background-color: #3E54AC !important;
+  color: white;
+}
+.light-theme .main {
+  background-color: #ECF2FF;
+}
+.light-theme .main .main-box a {
+  background-color: #655DBB;
+}
+.light-theme .main .main-box a:hover {
+  -webkit-box-shadow: #3E54AC 0px 2px 8px 0px;
+          box-shadow: #3E54AC 0px 2px 8px 0px;
+}
+.light-theme .footer {
+  background-color: #3E54AC;
+  color: white;
+}
+.light-theme .footer .footer-links a,
+.light-theme .footer .footer-links h3 {
+  color: white;
+}
+.light-theme .cookies {
+  background-color: #BFACE2;
+}
+.light-theme .cookies .box #accept {
+  background-color: #3E54AC;
+  color: white;
+}
+.light-theme .cookies .box #decline {
+  background-color: #655DBB;
+}
+
+.light-theme .main .skils .front-end {
+  background-image: url(../img/front-end-light.svg);
+}
+.light-theme .main .skils .back-end {
+  background-image: url(../img/back-end-light.svg);
+}
+.light-theme .main .skils .full-stack {
+  background-image: url(../img/full-stack-light.svg);
+}
+.light-theme .main .courses a:hover {
+  -webkit-box-shadow: #BFACE2 0px 13px 27px -5px, #3E54AC 0px 8px 16px -8px;
+          box-shadow: #BFACE2 0px 13px 27px -5px, #3E54AC 0px 8px 16px -8px;
+}
+.light-theme .main section {
+  background-color: #655DBB;
+}
+.light-theme .main .arrow-box {
+  background: none;
+}
+.light-theme .main .box a {
+  background-color: #655DBB;
+}
+.light-theme .main .title img {
+  -webkit-filter: invert(100);
+          filter: invert(100);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 880px;
+  }
+  .main {
+    height: auto;
+  }
+  .main .skils section {
+    width: 100%;
+  }
+  .main .skils div {
+    display: none;
+  }
+  .main section {
+    height: 328px;
+  }
+  .main .courses {
+    height: 2383px;
+  }
+  .main .courses .title div {
+    display: none;
+  }
+  .main .courses .box {
+    height: 2284px;
+  }
+  .main .courses .box a {
+    height: 364px;
+  }
+  .main .courses .box a div {
+    width: 560px;
+  }
+  .main .courses .box a p {
+    margin-top: 5px !important;
+  }
+  .main .university {
+    height: 640px;
+  }
+  .main .university .box {
+    height: 580px;
+  }
+  .main .university .box a {
+    width: 280px;
+    height: 280px;
+    pointer-events: none;
+  }
+  .main .university .box a img {
+    height: 133px;
+  }
+  .main .university .box a h4 {
+    width: 240px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 24px;
+    top: 148px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 280px;
+  }
+  h2 {
+    font-size: 1.563rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 49px;
+  }
+  .nav #burger {
+    display: block;
+  }
+  .nav .links {
+    width: 280px;
+    height: 150px;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #352F44;
+    padding: 20px 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav .links .box {
+    height: 110px;
+    width: 81px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav .links .anchors {
+    width: 83px;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav .links .toggle {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .nav.active .links {
+    top: 50px;
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .light-theme .links {
+    background-color: #BFACE2;
+  }
+  .main {
+    height: auto;
+  }
+  .main .skils.skils-front-end {
+    height: 311px !important;
+  }
+  .main .skils.skils-front-end section {
+    height: 311px !important;
+  }
+  .main .skils {
+    height: 400px;
+  }
+  .main .skils section {
+    width: 100% !important;
+    height: 400px !important;
+  }
+  .main .skils section h3 {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    line-height: 24px !important;
+  }
+  .main .skils section ul {
+    margin-top: 10px !important;
+    font-size: 0.8rem !important;
+    line-height: 15px !important;
+  }
+  .main section {
+    width: 100% !important;
+    height: 580px !important;
+  }
+  .main section h3 {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    line-height: 24px !important;
+  }
+  .main section ul {
+    margin-top: 10px !important;
+    font-size: 0.8rem !important;
+    line-height: 15px !important;
+  }
+  .main .skils-full-stack {
+    height: 400px !important;
+  }
+  .main .courses {
+    height: 3684px !important;
+  }
+  .main .courses .box {
+    height: 3634px !important;
+  }
+  .main .courses .box a {
+    width: 100%;
+    height: 589px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px 30px 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+  .main .courses .box a img {
+    width: 240px;
+  }
+  .main .courses .box a div {
+    width: 100%;
+  }
+  .main .courses .box a div h2 {
+    text-align: center;
+    font-size: 1.563rem;
+    line-height: 30px;
+  }
+  .main .courses .box a div p {
+    font-size: 0.8rem;
+    line-height: 15px;
+  }
+  .main .courses .box a img[alt="The odin project"] {
+    margin-left: 0;
+    height: 240px;
+  }
+  .main .university {
+    height: 1830px;
+  }
+  .main .university .box {
+    height: 1780px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer img[alt=logo] {
+    display: none;
+  }
+}
